@@ -1,12 +1,26 @@
-familiarize yourself with the Java API to determine the number of available processors or threads on the system you're using, 
+# Java Concurrency Basics
+
+## Tasks
+
+### 0. Creating and joining threads
+Learn to create and join threads. You do not have to hand in this task.
+
+A. Write a program spawns an additional thread that prints "Hello world" using the [Java Thread API](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/lang/Thread.html).
+
+B. Modify the above program to spawn five threads. Each of these threads should print "Hello world X" where X is the thread number. Once all the threads have finished, the main thread should print "Goodbye".
+
+C. Modify your program so that each "Hello world" message also includes a unique thread number.
+
+### 1. Simple Synchronisation
+In this task we will explore race conditions and the ```syncrhonized``` keyword, familiarize yourself with the Java API to determine the number of available processors or threads on the system you're using, 
 and develop a pattern for testing concurrent programs.
 
 A. Observe the unpredictable behavior caused by race conditions.
   * Write a program spawing n threads. Each thread should increment a shared volatile integer 1,000,000 times without synchronization.
-  * After all threads have finished executing (use join()), and print the final value at the end.
+  * After all threads have finished executing (use ```join()```), and print the final value at the end.
   * Run the program locally with 4 threads. What results do you expect?
 
-B. Understand the effects of the synchronized keyword.
+B. Understand the effects of the ```synchronized``` keyword.
   * Modify the program from 2.1. Use the synchronized keyword when incrementing the shared integer.
   * Run the program locally with 4 threads. What results do you expect?
 
